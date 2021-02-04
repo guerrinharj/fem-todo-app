@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    font-size: 1.1rem;
+    margin: 0;
+    
+}
+
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(0, 0%, 97%);
+    color: hsl(235, 19%, 35%);
+}
+
+.main-dark {
+    background-color: hsl(235, 21%, 11%);
+    color: hsl(234, 39%, 85%)
+}
+
+.background-area {
+    position: fixed;
+    width: 100vw;
+    background-image: url('./images/bg-desktop-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 33vh;
+}
+
+.background-area-dark {
+    background-image: url('./images/bg-desktop-dark.jpg')
+}
+
+.main-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.main-container {
+    width: 50vw;
+    margin:auto;
+    height: 80vh;
+    z-index: 10;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title-area {
+    display: flex;
+    align-items: center;
+}
+
+
+.site-title {
+    font-size: 3.0rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 8px;
+    color: white;
+    transform: translateY(10%);
+}
+
+.night-switch {
+    background-image: url('./images/icon-moon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.day-switch {
+    background-image: url('./images/icon-sun.svg');
+}
+
+
+
+
+.input-area {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10px;
+}
+
+.input-area input[type="search"] {
+    background-color: hsl(0, 0%, 97%);
+    -webkit-appearance: none;
+}
+
+.input-area-dark {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.input-area-dark input[type="search"] {
+    background-color: hsl(235, 24%, 19%);
+    color: white;
+    -webkit-appearance: none;
+}
+
+.input-icon-area {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.input-icon-area div {
+    border: solid 1px #ccc;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+}
+
+.input-zone {
+    display: flex;
+    width: 100%
+}
+
+.input-area input {
+    border: none;
+    font-family: 'Josefin Sans', sans-serif!important;
+    font-size: 1.1rem;
+    width: 100%;
+    outline: none;
+    transform: translateY(5%);
+}
+
+.input-area-dark input {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.input-area-dark input::placeholder {
+    color: hsl(234, 11%, 52%);
+}
+
+.todo-list-area {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 10px 10px 100px 1px #ccc;
+}
+
+.todo-list-area-dark {
+    background-color: hsl(235, 24%, 19%);
+    box-shadow: none;
+}
+
+.the-list {
+    padding-inline-start: 0px;
+    list-style-type: none;
+    margin-block-start: 0px;
+}
+
+.todo-list-area  .the-list li {
+    padding: 28px;
+    border-bottom: solid 1px #ccc;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.todo-list-area-dark  .the-list li {
+    border-bottom: solid 1px hsl(233, 14%, 35%)
+}
+
+.item-invisible {
+    display: none!important;
+}
+
+.list-icon {
+    border: solid 1px #ccc;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+    transform: translateY(-10%);
+    cursor: pointer;
+    position: relative
+}
+
+.checked {
+    background-image: url(./images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    background: linear-gradient(to right, #55DDFF, #C058F3);
+    background-color: white
+}
+
+
+.list-close {
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+
+.list-status-area {
+    width: 100%;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    color: hsl(233, 11%, 64%)
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 20px auto;
+    /* transform: translateY(-50%) */
+
+}
+
+.number-items {
+    display: inline;
+}
+
+.list-status {
+    margin-left: 10px;
+}
+
+
+.status {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.status div {
+    margin-right: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.status div:hover {
+    color: rgb(85, 85, 233);
+    transition: 0.2s ease;
+}
+
+.list-status-area-dark .status div {
+    color: hsl(234, 39%, 85%)
+}
+
+.list-status-area-dark .status div:hover {
+    color: purple;
+}
+
+.mobile-status-area {
+    display: none;
+}
+
+.drag-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18vh;
+    font-size: 1rem;
+    color: hsl(233, 11%, 64%)
+}
+
+.drag-area-dark {
+    color: hsl(233, 14%, 35%);
+}
+
+.clear-completed-area {
+    cursor: pointer;
+}
+
+
+
+
+.warning {
+    position: fixed;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+
+    .main-container {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .header {
+        margin-bottom: 50px
+    }
+
+    .background-area {
+        width: 100vw;
+    }
+
+    .list-container {
+        width: 85%;
+    }
+
+    .mobile-status-area {  
+        display: flex;  
+        justify-content: space-between;
+        flex: nowrap;
+        align-items: center;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 10px 10px 100px 1px #ccc;
+        margin-top: 20px;
+    }
+
+    .mobile-status-area-dark {
+        background-color:  hsl(235, 24%, 19%);    
+        color: hsl(235, 19%, 35%);
+    }
+
+    .status {
+        display: none;
+    }
+
+    .mobile-status-container {
+        margin: auto;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+    .mobile-status-container div:hover{
+        color: rgb(85, 85, 233);
+        transition: 0.2s ease;
+    }
+
+
+    .drag-area {
+        height: 12vh;
+    }
+
+
+}
